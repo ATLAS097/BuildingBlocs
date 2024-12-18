@@ -53,7 +53,9 @@ const SQLSTATEMENT = `
     ("Plushies", "Toy", "https://cdn.pixabay.com/photo/2023/03/05/23/21/teddy-bear-7832352_1280.jpg"),
     ("Board Game", "Toy", "https://cdn.pixabay.com/photo/2016/02/22/09/44/chess-1215079_1280.jpg"),
     ("Shirt", "Clothes", "https://cdn.pixabay.com/photo/2019/07/27/21/42/t-shirt-4367577_1280.jpg"),
-    ("Pants", "Clothes", "https://cdn.pixabay.com/photo/2014/08/26/21/48/jeans-428613_1280.jpg");
+    ("Pants", "Clothes", "https://cdn.pixabay.com/photo/2014/08/26/21/48/jeans-428613_1280.jpg"),
+    ("Wallet", "Accesory", "https://cdn.pixabay.com/photo/2020/03/28/13/26/wallet-4977021_1280.jpg"),
+    ("Bag", "Accesory", "https://cdn.pixabay.com/photo/2017/08/03/10/00/bag-2575283_1280.jpg");
 
     INSERT INTO user_gift_rel (user_id, item_id, amount) VALUES
     (1, 1, 2),
@@ -70,7 +72,8 @@ const SQLSTATEMENT = `
     ("Food", 1),
     ("Furniture", 10),
     ("Toy", 2),
-    ("Clothes", 2);
+    ("Clothes", 2),
+    ("Accesory", 3);
 `;
 const callback = (error, results, fields) => {
     if (error){

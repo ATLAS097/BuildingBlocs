@@ -3,35 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap + Express</title>
+    <title>Christmas</title>
+    <link rel="stylesheet" href="./css/style.css">
     <!-- Bootstrap CSS from CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">My Website</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/client/index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/client/gift.html">Gift</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/client/leaderboard.html">Leaderboard</a>
-                    </li>
-                </ul>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+            </ul>
+            <div class="search-icon mx-5">
+                <input type="text" placeholder="Search...">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section my-hero-pic">
+        <div class="hero-content">
+            <h1><span class="christmas-text text-white">Merry Christmas</span></h1>
+            <p class="text-white">
+                Christmas is a time to come together and give back to the community. By donating, you are helping families and individuals experience the joy of the season. Let’s celebrate kindness, compassion, and the magic of giving this Christmas!
+            </p>
+            <a href="#" class="see-more-btn">SEE MORE</a>
+        </div>
+    </section>
+
+    <!-- Content begins -->
+    <div class="ms-5 me-5 my-3">
+        <div class="mt-5 text-center">
+            <h2 id="main" class="text-danger fw-bold">Christmas Donation</h2>
+            <p class="mt-3">
+                <em>Welcome to the CGD – a season of giving, joy, and making a difference!</em>
+            </p>
+        </div>
+
+        <div>
+            <p class="mt-3 mb-2">
+                Christmas is not just about festivities; it’s about spreading kindness and sharing what we have with those in need. This year, we invite you to be part of something special: donate items, earn points, and see your impact grow on our leaderboard.
+            </p>
+            <p>
+                As the season of giving unfolds, your contributions will light up lives and bring smiles to many. To honor your generosity, top donors will be recognized with Gold, Silver, and Bronze medals as a token of appreciation for their spirit of giving.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Timeline section -->
+  <div>
+    <h3 class="text-center my-4 text-danger">Donation Guidelines – Spread Joy This Christmas!</h3>
+  </div>
+  <div class="container mb-5">
+    <div class="timeline position-relative px-0 py-3 mx-auto bg-danger-subtle mt-5">
+      <!-- Event 1 -->
+      <div class="timeline-event position-relative my-3 mx-0">
+        <div class="timeline-badge position-absolute bg-danger"></div>
+        <div class="timeline-box position-relative p-1  bg-white timeline-box-left text-center" data-bs-toggle="tooltip"
+          data-bs-placement="left" title="Donate">Choose Your Items to Donate
+        </div>
+      </div>
+      <!-- Event 2 -->
+      <div class="timeline-event position-relative my-3 mx-0">
+        <div class="timeline-badge position-absolute bg-danger"></div>
+        <div class="timeline-box timeline-box-right position-relative p-1 bg-white text-center "
+          data-bs-toggle="tooltip" data-bs-placement="right" title="Visit DOnation Page">Visit the Donation Page</div>
+      </div>
+      <!-- Event 3 -->
+      <div class="timeline-event position-relative my-3 mx-0">
+        <div class="timeline-badge position-absolute bg-danger"></div>
+        <div class="timeline-box position-relative p-1  bg-white timeline-box-left text-center" data-bs-toggle="tooltip"
+          data-bs-placement="left"
+          title="Earn Points">
+          Earn Points for Every Donation</div>
+      </div>
+      <!-- Event 4 -->
+      <div class="timeline-event position-relative my-3 mx-0">
+        <div class="timeline-badge position-absolute bg-danger"></div>
+        <div class="timeline-box timeline-box-right position-relative p-1 bg-white text-center "
+          data-bs-toggle="tooltip" data-bs-placement="right"
+          title="Track Progress">Track Your Progress on the Leaderboard</div>
+      </div>
+      <!-- Event 5 -->
+      <div class="timeline-event position-relative my-3 mx-0">
+        <div class="timeline-badge position-absolute bg-danger"></div>
+        <div class="timeline-box position-relative p-1  bg-white timeline-box-left text-center" data-bs-toggle="tooltip"
+          data-bs-placement="left" title="Confirmation">Wait for Confirmation</div>
+      </div>
+      <!-- Event 6 -->
+      <div class="timeline-event position-relative my-3 mx-0">
+        <div class="timeline-badge position-absolute bg-danger"></div>
+        <div class="timeline-box timeline-box-right position-relative p-1 bg-white text-center "
+          data-bs-toggle="tooltip" data-bs-placement="right"
+          title="Rewards">Claim Your Rewards</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="bg-danger text-white footer-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mt-4">
+                <div class="mb-5">
+                </div>
+                <div class="mb-5">
+                    <strong>Christmas Donation Website</strong><br>
+                    123 Holiday Avenue, Santa City, Wonderland 12345
+                </div>
+            </div>
+
+            <div class="col-md-9 mt-5 text-end">
+                <span>Follow us for festive updates: </span>
+                <a href="#"><i class="fa-brands fa-facebook p-2" style="color: #fff;"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram p-2" style="color: #fff;"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube p-2" style="color: #fff;"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin p-2" style="color: #fff;"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram p-2" style="color: #fff;"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok p-2" style="color: #fff;"></i></a>
+                
+                <span>Our Apps:</span>
+                <a href="#"><i class="fa-solid fa-mobile p-2" style="color: #fff;"></i></a>
             </div>
         </div>
-    </nav>
-    <div class="container">
 
+        <div class="my-line" style="border-top: 2px solid #fff; margin-top: 20px; margin-bottom: 20px;"></div>
+
+        <div class="row">
+            <div class="col-md-8 mt-2">
+                <p>🎄 Help spread the holiday cheer. Donate today and make a difference this Christmas! 🎁</p>
+            </div>
+
+            <div class="col-md-4 text-end">
+                <i class="fa-regular fa-copyright"></i>
+                <span class="small">2024 Christmas Donation Website</span>
+            </div>
+        </div>
+    </div>
+</footer>
     <!-- Optional: Include Bootstrap Bundle (with JavaScript) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Bootstrap JS and Popper.js from CDN -->

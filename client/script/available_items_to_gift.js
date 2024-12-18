@@ -9,18 +9,20 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         const gifts = await giftResponse.json();
 
-        // Divide the gifts into three equal parts
-        const partSize = Math.floor(gifts.length / 3);
+        // Divide the gifts into four equal parts
+        const partSize = Math.ceil(gifts.length / 4);
         const col1 = gifts.slice(0, partSize);
         const col2 = gifts.slice(partSize, partSize * 2);
-        const col3 = gifts.slice(partSize * 2);
+        const col3 = gifts.slice(partSize * 2, partSize * 3);
+        const col4 = gifts.slice(partSize * 3);
 
-        // Create three columns for the gift items
-        const columns = [col1, col2, col3];
+        // Create four columns for the gift items
+        const columns = [col1, col2, col3, col4];
+
 
         columns.forEach((column, index) => {
             const colDiv = document.createElement('div');
-            colDiv.className = 'col-md-4';  // Create a column for each set of gifts
+            colDiv.className = 'col-md-3';  // Create a column for each set of gifts
 
             column.forEach(gift => {
                 const card = document.createElement('div');
