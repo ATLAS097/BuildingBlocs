@@ -12,3 +12,15 @@ module.exports.getAllGift = (req, res, next) => {
     }
     model.getAllGift(callback)
 }
+
+module.exports.getHistory = (req, res, next) => {
+    const callback = (error, results, fields) => {
+        if (error){
+            console.error(`Error getHistory: ${error}`)
+            res.status(500).json(error)
+        } else{
+            res.status(200).json(results)
+        }
+    }
+    model.getHistory(callback)
+}

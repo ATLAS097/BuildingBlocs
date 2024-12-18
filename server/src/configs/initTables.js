@@ -49,7 +49,7 @@ const SQLSTATEMENT = `
     ("Chocolate", "Food", "https://cdn.pixabay.com/photo/2010/12/13/10/13/chocolate-2554_1280.jpg"),
     ("Table", "Furniture", "https://img.freepik.com/free-vector/empty-white-plastic-table-isolated-white-background-product-display-template-vector-3d-table_90220-2601.jpg?t=st=1734485746~exp=1734489346~hmac=279c840dc2d7b6e56a2936e19bcc81699ff624de947a5e179b529763d0c8c704&w=1380"),
     ("Chair", "Furniture", "https://cdn.pixabay.com/photo/2018/03/30/06/05/chair-3274474_1280.jpg"),
-    ("Fridge", "Furniture", "https://img.freepik.com/free-vector/refridgerator-white-background_1308-102266.jpg?t=st=1734485746~exp=1734489346~hmac=3c565a3a8c5cbafd8118b3e8de928085f34fb9612918c56bbbb7283d5b75c043&w=740"),
+    ("Fridge", "Furniture", "https://img.freepik.com/free-vector/refrigerator-with-closed-opened-door_1308-95206.jpg?t=st=1734499558~exp=1734503158~hmac=4309cf89a2c9121af9c5fc3193b465927a887f85bd45fd962e11b9c3a9bfa545&w=1380"),
     ("Plushies", "Toy", "https://cdn.pixabay.com/photo/2023/03/05/23/21/teddy-bear-7832352_1280.jpg"),
     ("Board Game", "Toy", "https://cdn.pixabay.com/photo/2016/02/22/09/44/chess-1215079_1280.jpg"),
     ("Shirt", "Clothes", "https://cdn.pixabay.com/photo/2019/07/27/21/42/t-shirt-4367577_1280.jpg"),
