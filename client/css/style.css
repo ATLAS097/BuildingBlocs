@@ -1,0 +1,209 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #15391E; /* Dark green background */
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #204020; 
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ef6c70; /* Gold hover effect */
+}
+
+.search-icon input {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 100px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.hero-content .christmas-text {
+    color: #F5BF42; /* Gold color for 'Christmas' */
+    font-family: cursive;
+}
+
+.hero-content h2 {
+    font-size: 30px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.see-more-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #e31e1e;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.see-more-btn:hover {
+    background-color: #d19d35;
+}
+
+.my-hero-pic {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("../img/christmas_hero_pic.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.my-gradient-color {
+    background-color: linear-gradient(to right, red , yellow);
+}
+/* Hero Image */
+.hero-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Decorative Elements */
+.decorations {
+    position: relative;
+}
+
+/* styles for the timeline */
+.timeline {
+    height: 550px;
+    width: 10px;
+}
+
+/* creates the vertical line in the timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: red;
+    left: 50%;
+    margin-left: -1px;
+}
+
+/* styles for each event in the timeline */
+.timeline-event .timeline-badge {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    border: 2px solid black;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+/* styles for the box that appears with each timeline event */
+.timeline-event .timeline-box {
+    width: 120px;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+/* positions the event box to the left of the timeline */
+.timeline-event .timeline-box-left {
+    left: -150px;
+}
+
+/* positions the event box to the right of the timeline */
+.timeline-event .timeline-box-right {
+    left: 50px;
+}
+
+
+/* Footer */
+.footer-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/footerBG.png");
+    background-size: cover; /* Make the background image cover the entire footer */
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px 0; /* Add padding to create spacing inside the footer */
+}
+
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+.my-line {
+    border-top: 2px solid #fff; /* White border to add a festive feel */
+    margin-top: 20px;
+}
+
+footer .text-end a {
+    transition: color 0.3s ease;
+}
+
+footer .text-end a:hover {
+    color: #ffffff; /* Gold hover effect */
+}
+
+footer .text-end span {
+    color: #ffffff;
+    font-weight: bold;
+}
