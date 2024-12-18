@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
-    "init_tables": "node src/configs/initTables.js"
+    "dev": "nodemon server/server.js",
+    "init_tables": "node server/src/configs/createSchema.js && node server/src/configs/initTables.js"
   },
   "author": "",
   "license": "ISC",
