@@ -32,8 +32,7 @@
     </nav>
     <div class="container">
         <h1 class="mt-5">Leaderboard</h1>
-        <button class="btn btn-primary mt-3" id="fetchButton">Fetch Leaderboard</button>
-        
+    
         <!-- Table to display leaderboard -->
         <table class="table mt-3" id="leaderboard">
             <thead>
@@ -47,35 +46,31 @@
             </tbody>
         </table>
     </div>
+    
+    
+    <div class="container">
+        <h2 class="mt-5">Gift History</h2>
+        <table id="history-table" class="table mt-3">
+            <thead>
+                <tr>
+                    <th>Gifted Time</th>
+                    <th>Username</th>
+                    <th>Item</th>
+                    <th>Total Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- History data will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
 
     <!-- Bootstrap JS and Popper.js from CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
-    <script>
-        document.getElementById('fetchButton').addEventListener('click', function() {
-            // Fetch leaderboard data from the API
-            fetch('http://localhost:8000/users/leaderboard')
-                .then(response => response.json())
-                .then(data => {
-                    // Clear any previous content
-                    const dataContainer = document.getElementById('data');
-                    dataContainer.innerHTML = '';  // Clear previous leaderboard data
-
-                    // Loop through the data and create a row for each user
-                    data.forEach(user => {
-                        const row = document.createElement('tr');
-                        row.innerHTML = `
-                            <td>${user.username}</td>
-                            <td>${user.points}</td>
-                        `;
-                        dataContainer.appendChild(row); // Add the row to the table
-                    });
-                })
-                .catch(error => {
-                    console.error(`Error fetching leaderboard data:${error}`);
-                });
-        });
-    </script>
+    <script src="./script/leaderboard.js"></script>
+    
+    <script src="./script/gift_history.js"></script>
 </body>
 </html>
