@@ -1,0 +1,312 @@
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 5rem auto 2rem auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 100%;
+  height: auto;
+}
+
+.timeline-line {
+  position: absolute;
+  width: 5px;
+  background-color: #f6323e;
+  left: 50%;
+  margin-left: -2px;
+  z-index: 0;
+  top: 10rem;
+  bottom: 0;
+}
+
+.timeline-image {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background-color: #fff;
+  border: 3px solid #f6323e;
+  border-radius: 50%;
+  object-fit: contain;
+  padding: 5px;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: appear 1s ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+
+.card-container {
+  position: relative;
+  max-width: calc(30% - 40px); /* Adjust card width */
+  margin-bottom: 70px; /* Space between cards */
+}
+
+.card-container:nth-child(even) {
+  left: 50%; /* For even cards */
+}
+
+.card-container:nth-child(odd) {
+  left: 45%; /* For odd cards */
+  transform: translateX(-100%);
+}
+
+/* Add space between the image and the card for even cards */
+.card-container:nth-child(even) .card {
+  margin-left: 20px; /* Space between the image and card */
+}
+
+.card-container:nth-child(even) .right-card-arrow {
+  left: calc(25px + 20px); /* Move the arrow along with the card */
+}
+
+
+
+/* For smaller screens */
+@media screen and (max-width: 768px) {
+  .timeline {
+    margin-top: 5rem;
+  }
+
+  .card-container {
+    width: 100%;
+    margin-left: 40px;
+    padding-right: 25px;
+    max-width: 80vw;
+    padding-bottom: 50px;
+  }
+
+  .timeline-line {
+    left: 31px; /* Adjust line position for smaller screens */
+  }
+
+  .timeline-image {
+    left: 50%; /* Adjust the image on smaller screens */
+  }
+}
+
+
+
+
+.padding-top-custom {
+  padding-top: 10%;
+}
+
+
+
+
+
+
+.card-container:nth-child(odd) img {
+  right: -72px;
+}
+
+.card-container:nth-child(even) img {
+  left: -38px;
+}
+
+.card {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  border: none; /* Remove the default border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  background-color: #fff;
+  min-height: 100px; /* Adjust as needed */
+}
+
+.card-container:nth-child(odd) .card {
+  animation-name: slideInLeft;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+
+.card-container:nth-child(even) .card {
+  animation-name: slideInRight;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+
+.left-card-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid rgb(255, 240, 240);
+  right: -15px;
+  animation-name: slideInLeft;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+.right-card-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid rgb(255, 240, 240);
+  left: 25px;
+  animation-name: slideInRightCard;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRightCard {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(40px);
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 769px) {
+  .card-container:nth-child(odd) {
+    width: 80%;
+    padding-left: 80px;
+    padding-right: 20px;
+  }
+  .card-container:nth-child(even) {
+    width: 80%;
+    padding-left: 20px;
+    padding-right: 80px;
+  }
+
+  .left-card-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid rgb(255, 240, 240);
+    right: 5px;
+    animation-name: slideInLeft;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+  }
+
+  .right-card-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid rgb(255, 240, 240);
+    left: 45px;
+    animation-name: slideInRightCard;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .timeline {
+    margin-top: 5rem;
+  }
+  .timeline::after {
+    left: 31px;
+  }
+
+  .card-container {
+    width: 100%;
+    margin-left: 40px;
+    padding-right: 25px;
+    max-width: 80vw;
+    padding-bottom: 50px;
+  }
+
+  .card {
+    font-size: 14px;
+  }
+
+  .card-container:nth-child(even) .card {
+    animation-name: appear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+  }
+
+  .card-container:nth-child(odd) .card {
+    animation-name: appear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+  }
+
+  .card-container:nth-child(even) {
+    left: 0%;
+    padding-left: 20px;
+  }
+
+  .card-container:nth-child(odd) {
+    padding-left: 20px;
+  }
+
+  .card-container svg {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    fill: #f6323e;
+    top: 33px;
+    z-index: 1;
+    animation: appear 1s ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+
+  .card-container:nth-child(odd) svg,
+  .card-container:nth-child(even) svg {
+    left: -22px;
+  }
+
+  .left-card-arrow,
+  .right-card-arrow {
+    display: none;
+  }
+}

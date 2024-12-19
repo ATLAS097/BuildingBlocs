@@ -9,9 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
             dataContainer.innerHTML = '';  // Clear previous leaderboard data
 
             // Loop through the data and create a row for each user
+            rank = 0
             data.forEach(user => {
+                rank += 1
                 const row = document.createElement('tr');
                 row.innerHTML = `
+                    <th scope="row">${rank}</th>
                     <td>${user.username}</td>
                     <td>${user.points}</td>
                 `;

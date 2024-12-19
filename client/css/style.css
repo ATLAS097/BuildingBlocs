@@ -1,209 +1,376 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
 /* Body Styling */
 body {
-    background-color: #15391E; /* Dark green background */
-    color: #fff;
-    overflow-x: hidden;
+  background-color: #15391E; /* Dark green background */
+  color: #fff;
+  overflow-x: hidden;
 }
 
-/* Navigation Bar */
-.navbar {
-    position: sticky; 
-    top: 0; 
-    z-index: 1000; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #204020; 
+/* Container for the timeline */
+.timeline-container {
+  display: flex;
+  flex-direction: column; /* Stack timeline elements vertically */
+  position: relative;
+  padding: 20px;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.navbar ul {
-    display: flex;
-    list-style: none;
+/* Timeline line */
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 50%; /* Center the line */
+  width: 5px; /* Adjust line width */
+  height: 90%;
+  background-color: #f6323e; /* Red line color */
+  transform: translateX(-50%); /* Center the line exactly */
 }
 
-.navbar ul li {
-    margin-left: 30px;
+/* Timeline event images (red circle at the center of the line) */
+.timeline-image {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background-color: #fff;
+  border: 3px solid #f6323e;
+  border-radius: 50%;
+  object-fit: contain;
+  padding: 5px;
+  z-index: 1;
+  transform: translateX(-50%); /* Center the image */
+  animation: appear 1s ease-in-out both;
+  animation: appear 1s ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.timeline .card-container:nth-child(odd) .timeline-image {
+  right: 20.5rem; /* Adjust position for odd cards */
+}
+.timeline-container .card-container:nth-child(even) .timeline-image {
+  left: 22.5rem; /* Adjust position for even cards */
 }
 
-.navbar ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    transition: color 0.3s;
+/* Cards container */
+.card-container {
+  width: 90%; /* Adjust width of the card */
+  padding: 10px;
+  margin: 20px 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+.card {
+  width: 90%;
 }
 
-.navbar ul li a:hover {
-    color: #ef6c70; /* Gold hover effect */
+
+
+/* Odd cards - align to the right of the timeline */
+.card-container:nth-child(odd) {
+  left: 5rem; /* Position odd cards towards the right */
+  transform: translateX(50%); /* Adjust transform to push it further to the right */
+
 }
 
-.search-icon input {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
+/* Even cards - align to the left of the timeline */
+.card-container:nth-child(even) {
+  right: 11rem; /* Position even cards towards the left */
+  transform: translateX(0); /* Keep them aligned to the left */
+
 }
 
-/* Hero Section */
-.hero-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 100px;
-    position: relative;
+/* Styling for card image */
+.card-container img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
 }
 
-.hero-content {
-    max-width: 500px;
+/* Timeline event content */
+.timeline-event {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.hero-content h1 {
-    font-size: 60px;
-    color: #fff;
-    margin-bottom: 10px;
+/* Left and right arrows for cards */
+.left-card-arrow, .right-card-arrow {
+  width: 10px;
+  height: 10px;
+  border-style: solid;
+  border-width: 5px 5px 0 0;
 }
 
-.hero-content .christmas-text {
-    color: #F5BF42; /* Gold color for 'Christmas' */
-    font-family: cursive;
+.left-card-arrow {
+  transform: rotate(45deg);
+  margin-left: 10px;
 }
 
-.hero-content h2 {
-    font-size: 30px;
-    font-weight: lighter;
-    margin-bottom: 20px;
+.right-card-arrow {
+  transform: rotate(-135deg);
+  margin-right: 10px;
 }
 
-.hero-content p {
-    line-height: 1.6;
-    font-size: 16px;
-    margin-bottom: 30px;
+/* Card content */
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-text {
+  color: #15391E;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Fade-in and Slide-up Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+.button-to-big {
+  font-size: 20px; /* Set your desired font size here */
 }
 
 .see-more-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #e31e1e;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s ease;
+  border-color: #f6323e;
+  border: 2px solid; /* Thin black border */
+  padding: 10px 20px; /* Optional: Adjust padding if needed */
+  border-radius: 5px; 
+}
+
+
+/* Navbar */
+.navbar {
+  position: sticky; 
+  top: 0; 
+  z-index: 1000; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #204020; 
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin-top:0.5rem;
+  margin-bottom:0.5rem;
+}
+
+.navbar ul li {
+  margin-left: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #ef6c70; /* Gold hover effect */
+}
+
+
+
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 100px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.hero-content .christmas-text {
+  color: #F5BF42; /* Gold color for 'Christmas' */
+  font-family: cursive;
+}
+
+.hero-content h2 {
+  font-size: 30px;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  line-height: 1.6;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.see-more-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #e31e1e;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
 
 .see-more-btn:hover {
-    background-color: #d19d35;
+  color: #ffffff;
+  background-color: #2b812e;
 }
 
 .my-hero-pic {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("../img/christmas_hero_pic.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-    position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("../img/christmas_hero_pic.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
 }
 
 .my-gradient-color {
-    background-color: linear-gradient(to right, red , yellow);
+  background-color: linear-gradient(to right, red , yellow);
 }
+
 /* Hero Image */
 .hero-image img {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 /* Decorative Elements */
 .decorations {
-    position: relative;
+  position: relative;
 }
 
-/* styles for the timeline */
-.timeline {
-    height: 550px;
-    width: 10px;
+/* Pass Achievement bg */
+.past-achievement-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/greenBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 50px 0;
+  color: white;
 }
 
-/* creates the vertical line in the timeline */
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: red;
-    left: 50%;
-    margin-left: -1px;
+.my-front-size {
+  font-size: 50px;
 }
 
-/* styles for each event in the timeline */
-.timeline-event .timeline-badge {
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    margin-left: -10px;
-    border: 2px solid black;
-    border-radius: 50%;
-    z-index: 100;
+
+.table-one tbody tr:nth-child(odd) {
+  background-color: rgb(227, 255, 230); /* Lighter blue */
 }
 
-/* styles for the box that appears with each timeline event */
-.timeline-event .timeline-box {
-    width: 120px;
-    border: 2px solid black;
-    border-radius: 0.5rem;
-    cursor: pointer;
+.table-two tbody tr:nth-child(odd) {
+  background-color: rgb(255, 246, 246); /* Lighter green */
 }
 
-/* positions the event box to the left of the timeline */
-.timeline-event .timeline-box-left {
-    left: -150px;
+/* For the first table title */
+.table-title-one {
+  color: #f6323e; /* Dodger blue */
 }
 
-/* positions the event box to the right of the timeline */
-.timeline-event .timeline-box-right {
-    left: 50px;
+/* For the second table title */
+.table-title-two {
+  color: #208138; /* Lime green */
 }
+
+h1 {
+  font-size: 2.5rem;
+  color: #B22222; /* Festive red */
+}
+
+.countdown {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.countdown span {
+  color: #B22222; /* Alternating festive red for numbers */
+}
+
+.countdown span.label {
+  color: #228B22; /* Green for labels like Months, Days */
+}
+
+
+
+
 
 
 /* Footer */
 .footer-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/footerBG.png");
-    background-size: cover; /* Make the background image cover the entire footer */
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 50px 0; /* Add padding to create spacing inside the footer */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/footerBG.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 50px 0; 
 }
 
 footer {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .my-line {
-    border-top: 2px solid #fff; /* White border to add a festive feel */
-    margin-top: 20px;
+  border-top: 2px solid #fff; /* White border to add a festive feel */
+  margin-top: 20px;
 }
 
 footer .text-end a {
-    transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 footer .text-end a:hover {
-    color: #ffffff; /* Gold hover effect */
+  color: #ffffff; /* Gold hover effect */
 }
 
 footer .text-end span {
-    color: #ffffff;
-    font-weight: bold;
+  color: #ffffff;
+  font-weight: bold;
 }
+

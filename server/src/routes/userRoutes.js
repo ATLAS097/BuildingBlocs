@@ -10,7 +10,7 @@ const userController = require("../controllers/userController")
 router.get("/leaderboard", userController.getLeaderBoard)
 // if someone add a gift
 // 
-router.post("/gifts", userController.addUser,userController.getGift, userController.getUserForDup, userController.getUserForAdded, userController.giveGift)
+router.post("/gifts", userController.addUser, userController.getUserForDup, userController.getUserForAdded, userController.giveGift)
 // add users
 router.post("/", userController.addUser)
 module.exports = router

@@ -1,0 +1,30 @@
+.crest-image {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: rgb(255, 240, 240);
+}
+/* .table th {
+  text-align: center;
+} */
+
+@media (max-width: 1024px) {
+  .card {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    
+  }
+}
+
+@media (max-width: 767px) {
+  /* .card {
+    max-width: 90%;
+    min-height: 80%;
+  } */
+
+  .table {
+    font-size: 10px;
+  }
+}

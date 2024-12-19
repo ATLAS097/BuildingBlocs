@@ -1,104 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christmas</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- Bootstrap CSS from CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+
+  <!-- Bootstrap 5.3 cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+  <!-- JavaScript 5.3 cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" rel="javaScript"></script>
+
+  <!-- Font awesome icons cdn (own kit)-->
+  <script src="https://kit.fontawesome.com/029e5fae6f.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="donate.html">Donate</a></li>
-                <li><a href="leaderboard.html">Leaderboard</a></li>
-            </ul>
-            <div class="search-icon mx-5">
-                <input type="text" placeholder="Search...">
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <ul>
+        <li><a href="index.html" class = "active">Home</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section my-hero-pic">
-        <div class="hero-content">
-            <h1><span class="christmas-text text-white">Merry Christmas</span></h1>
-            <p class="text-white">
-                Christmas is a time to come together and give back to the community. By donating, you are helping families and individuals experience the joy of the season. Let’s celebrate kindness, compassion, and the magic of giving this Christmas!
-            </p>
-            <a href="#" class="see-more-btn">SEE MORE</a>
-        </div>
-    </section>
 
-    <!-- Content begins -->
-    <div class="ms-5 me-5 my-3">
-        <div class="mt-5 text-center">
-            <h2 id="main" class="text-danger fw-bold">Christmas Donation</h2>
-            <p class="mt-3">
-                <em>Welcome to the CGD – a season of giving, joy, and making a difference!</em>
-            </p>
-        </div>
+  <!-- Hero Section -->
+  <section class="hero-section my-hero-pic">
+    <div class="hero-content">
+      <h1><span class="christmas-text text-white">About Us</span></h1>
+      <p class="text-white">
+        We are a passionate global community dedicated to spreading the joy of Christmas to those in need. Through
+        generous donations from kind-hearted individuals worldwide, we deliver hope and happiness to those who need it
+        most, ensuring no one misses out on the magic of the festive season.
+      </p>
+      <a href="#start" class="see-more-btn">SEE MORE</a>
+    </div>
+  </section>
 
-        <div>
-            <p class="mt-3 mb-2">
-                Christmas is not just about festivities; it’s about spreading kindness and sharing what we have with those in need. This year, we invite you to be part of something special: donate items, earn points, and see your impact grow on our leaderboard.
-            </p>
-            <p>
-                As the season of giving unfolds, your contributions will light up lives and bring smiles to many. To honor your generosity, top donors will be recognized with Gold, Silver, and Bronze medals as a token of appreciation for their spirit of giving.
-            </p>
-        </div>
+  <!-- Content begins -->
+  <div class="ms-5 me-5 my-3 mt-5 pt-5" id="start">
+    <div class="mt-5 text-center pt-5">
+      <h2 id="main" class="text-danger fw-bold">Christmas Donation</h2>
+      <p class="mt-3">
+        <em>Welcome to the Santa's Bag - a season of giving, joy, and making a difference!</em>
+      </p>
     </div>
 
-
-    <!-- Timeline section -->
-  <div>
-    <h3 class="text-center my-4 text-danger">Donation Guidelines – Spread Joy This Christmas!</h3>
+    <div>
+      <p class="mt-3 mb-2">
+        Christmas is not just about festivities; it's about spreading kindness and sharing what we have with those in
+        need. This year, we invite you to be part of something special: donate items, earn points, and see your impact
+        grow on our leaderboard.
+      </p>
+      <p>
+        As the season of giving unfolds, your contributions will light up lives and bring smiles to many. To honor your
+        generosity, top donors will be recognized with Gold, Silver, and Bronze medals as a token of appreciation for
+        their spirit of giving.
+      </p>
+    </div>
   </div>
-  <div class="container mb-5">
-    <div class="timeline position-relative px-0 py-3 mx-auto bg-danger-subtle mt-5">
+
+
+  <!-- Timeline section -->
+  <div>
+    <h3 class="text-center my-4 text-danger mt-5 pt-5">Donation Guidelines - Spread Joy This Christmas!</h3>
+  </div>
+  <section class="timeline-container">
+    <div class="timeline-line"></div>
+    <div class="timeline">
       <!-- Event 1 -->
-      <div class="timeline-event position-relative my-3 mx-0">
-        <div class="timeline-badge position-absolute bg-danger"></div>
-        <div class="timeline-box position-relative p-1  bg-white timeline-box-left text-center" data-bs-toggle="tooltip"
-          data-bs-placement="left" title="Donate">Choose Your Items to Donate
+      <div class="card-container left-card">
+        <img src="../client/img/icon1.png" alt="Timeline Icon" class="timeline-image" />
+
+        <div class="card odd-card d-flex justify-content-center align-items-center text-center">
+          <div>
+            <p class="card-text">Choose Your Items to Donate</p>
+          </div>
         </div>
       </div>
+
       <!-- Event 2 -->
-      <div class="timeline-event position-relative my-3 mx-0">
-        <div class="timeline-badge position-absolute bg-danger"></div>
-        <div class="timeline-box timeline-box-right position-relative p-1 bg-white text-center "
-          data-bs-toggle="tooltip" data-bs-placement="right" title="Visit DOnation Page">Visit the Donation Page</div>
+      <div class="card-container right-card">
+        <img src="../client/img/icon2.png" alt="Timeline Icon" class="timeline-image" />
+
+        <div class="card even-card d-flex justify-content-center align-items-center text-center">
+          <div>
+            <p class="card-text">Visit the Donation Page</p>
+          </div>
+        </div>
       </div>
+
       <!-- Event 3 -->
-      <div class="timeline-event position-relative my-3 mx-0">
-        <div class="timeline-badge position-absolute bg-danger"></div>
-        <div class="timeline-box position-relative p-1  bg-white timeline-box-left text-center" data-bs-toggle="tooltip"
-          data-bs-placement="left"
-          title="Earn Points">
-          Earn Points for Every Donation</div>
+      <div class="card-container left-card">
+        <img src="../client/img/icon3.png" alt="Timeline Icon" class="timeline-image" />
+
+        <div class="card odd-card d-flex justify-content-center align-items-center text-center">
+          <div>
+            <p class="card-text">Earn Points for Every Donation</p>
+          </div>
+        </div>
       </div>
+
       <!-- Event 4 -->
-      <div class="timeline-event position-relative my-3 mx-0">
-        <div class="timeline-badge position-absolute bg-danger"></div>
-        <div class="timeline-box timeline-box-right position-relative p-1 bg-white text-center "
-          data-bs-toggle="tooltip" data-bs-placement="right"
-          title="Track Progress">Track Your Progress on the Leaderboard</div>
+      <div class="card-container right-card">
+        <img src="../client/img/icon4.png" alt="Timeline Icon" class="timeline-image" />
+
+        <div class="card even-card d-flex justify-content-center align-items-center text-center">
+          <div>
+            <p class="card-text">Track Your Progress on the Leaderboard</p>
+          </div>
+        </div>
       </div>
+
       <!-- Event 5 -->
-      <div class="timeline-event position-relative my-3 mx-0">
-        <div class="timeline-badge position-absolute bg-danger"></div>
-        <div class="timeline-box position-relative p-1  bg-white timeline-box-left text-center" data-bs-toggle="tooltip"
-          data-bs-placement="left" title="Confirmation">Wait for Confirmation</div>
+      <div class="card-container left-card">
+        <img src="../client/img/icon5.png" alt="Timeline Icon" class="timeline-image" />
+
+        <div class="card odd-card d-flex justify-content-center align-items-center text-center">
+          <div>
+            <p class="card-text">Wait for Confirmation</p>
+          </div>
+        </div>
       </div>
+
       <!-- Event 6 -->
-      <div class="timeline-event position-relative my-3 mx-0">
-        <div class="timeline-badge position-absolute bg-danger"></div>
-        <div class="timeline-box timeline-box-right position-relative p-1 bg-white text-center "
-          data-bs-toggle="tooltip" data-bs-placement="right"
-          title="Rewards">Claim Your Rewards</div>
+      <div class="card-container right-card">
+        <img src="../client/img/icon6.png" alt="Timeline Icon" class="timeline-image" />
+
+        <div class="card even-card d-flex justify-content-center align-items-center text-center">
+          <div>
+            <p class="card-text">Claim Your Rewards</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="past-achievement-bg">
+    <div class="text-center container">
+      <h2><span class="text-danger fw-bolder">Santa's Bag's </span>Achievements in numbers</h2>
+      <div class="row mt-4 text-center">
+        <div class="col-md-4 col-sm-6 col-12 initiative">
+          <h3 class="my-front-size">1100+</h3>
+          <p>Donations</p>
+          <p>The number of donations made by people all from the world across the years</p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-12 initiative">
+          <h3 class="my-front-size">203</h3>
+          <p>Members</p>
+          <p>The number of people donating so far</p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-12 initiative">
+          <h3 class="my-front-size">56</h3>
+          <p>Organizations being donated</p>
+          <p>The number of organizations in hand with CGD</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5 mb-5 pb-5 pt-5">
+    <div class="row">
+      <div class="col-md-6 col-12 text-column mt-5 mx-auto text-center">
+        <h3>Donate Right Now & Make a difference</h2>
+
+          <a href="donate.html" class=" mt-3 see-more-btn btn-outline-black button-to-big">Get Started</a>
+          <h3 class="mt-5">🎄 Donation Form will be closed in 🎄</h1>
+            <div class="countdown" id="countdown"></div>
+
+      </div>
+
+      <div class="col-md-6 col-12 image-column">
+        <figure class="figure">
+          <img src="./img/santa.jpg" alt="Description" class="figure-img img-fluid rounded-circle">
+        </figure>
       </div>
     </div>
   </div>
@@ -107,49 +196,73 @@
   <!-- Footer -->
   <footer class="bg-danger text-white footer-bg">
     <div class="container">
-        <div class="row">
-            <div class="col-md-3 mt-4">
-                <div class="mb-5">
-                </div>
-                <div class="mb-5">
-                    <strong>Christmas Donation Website</strong><br>
-                    123 Holiday Avenue, Santa City, Wonderland 12345
-                </div>
-            </div>
-
-            <div class="col-md-9 mt-5 text-end">
-                <span>Follow us for festive updates: </span>
-                <a href="#"><i class="fa-brands fa-facebook p-2" style="color: #fff;"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram p-2" style="color: #fff;"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube p-2" style="color: #fff;"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin p-2" style="color: #fff;"></i></a>
-                <a href="#"><i class="fa-brands fa-telegram p-2" style="color: #fff;"></i></a>
-                <a href="#"><i class="fa-brands fa-tiktok p-2" style="color: #fff;"></i></a>
-                
-                <span>Our Apps:</span>
-                <a href="#"><i class="fa-solid fa-mobile p-2" style="color: #fff;"></i></a>
-            </div>
+      <div class="row">
+        <div class="col-md-3 mt-4">
+          <div class="mb-5">
+          </div>
+          <div class="mb-5">
+            <strong>Santa's Bag</strong><br>
+            123 Holiday Avenue, Santa City, Wonderland 12345
+          </div>
         </div>
 
-        <div class="my-line" style="border-top: 2px solid #fff; margin-top: 20px; margin-bottom: 20px;"></div>
+        <div class="col-md-9 mt-5 text-end">
+          <span>Follow us for festive updates: </span>
+          <a href="#"><i class="fa-brands fa-facebook p-2" style="color: #fff;"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram p-2" style="color: #fff;"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube p-2" style="color: #fff;"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin p-2" style="color: #fff;"></i></a>
+          <a href="#"><i class="fa-brands fa-telegram p-2" style="color: #fff;"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok p-2" style="color: #fff;"></i></a>
 
-        <div class="row">
-            <div class="col-md-8 mt-2">
-                <p>🎄 Help spread the holiday cheer. Donate today and make a difference this Christmas! 🎁</p>
-            </div>
-
-            <div class="col-md-4 text-end">
-                <i class="fa-regular fa-copyright"></i>
-                <span class="small">2024 Christmas Donation Website</span>
-            </div>
+          <span>Our Apps:</span>
+          <a href="#"><i class="fa-solid fa-mobile p-2" style="color: #fff;"></i></a>
         </div>
+      </div>
+
+      <div class="my-line" style="border-top: 2px solid #fff; margin-top: 20px; margin-bottom: 20px;"></div>
+
+      <div class="row">
+        <div class="col-md-8 mt-2">
+          <p>🎄 Help spread the holiday cheer. Donate today and make a difference this Christmas! 🎁</p>
+        </div>
+
+        <div class="col-md-4 text-end">
+          <i class="fa-regular fa-copyright"></i>
+          <span class="small">2024 Santa's Bag</span>
+        </div>
+      </div>
     </div>
-</footer>
-    <!-- Optional: Include Bootstrap Bundle (with JavaScript) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Bootstrap JS and Popper.js from CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    
+  </footer>
+
+
 </body>
+<script>
+  function updateCountdown() {
+    const targetDate = new Date('2024-12-23T00:00:00');
+    const currentDate = new Date();
+
+    const totalSeconds = Math.floor((targetDate - currentDate) / 1000);
+
+    const months = Math.floor(totalSeconds / (30 * 24 * 60 * 60)); // Approximate months
+    const days = Math.floor((totalSeconds % (30 * 24 * 60 * 60)) / (24 * 60 * 60));
+    const hours = Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60));
+    const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
+    const seconds = totalSeconds % 60;
+
+    document.getElementById('countdown').innerHTML = `
+      <span>${months}</span> <span class="label">Months</span>, 
+      <span>${days}</span> <span class="label">Days</span>, 
+      <span>${hours}</span> <span class="label">Hours</span>, 
+      <span>${minutes}</span> <span class="label">Minutes</span>, 
+      <span>${seconds}</span> <span class="label">Seconds</span>
+    `;
+  }
+
+  // Initial call and interval
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
+
 </html>
