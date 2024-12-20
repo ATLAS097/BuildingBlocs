@@ -37,6 +37,7 @@
             items, you're not just clearing your shelves - you're changing lives. Each contribution, big or small, makes
             a meaningful impact and brings a smile to someone's face. Plus, your generosity earns you points,
             recognition on the leaderboard, and a chance to claim a Gold, Silver, or Bronze Santa's Bag. Join us in spreading
+            recognition on the leaderboard, and a chance to claim a Gold, Silver, or Bronze Santa's Bag. Join us in spreading
             warmth and kindness this Christmas - because every gift counts, and together, we can make this season truly
             magical!
           </p>
@@ -58,6 +59,7 @@
 
   <!-- Gift form -->
   <div id="formContainer" class="container mt-5"
+  <div id="formContainer" class="container mt-5"
     style="max-width: 100%; padding: 30px; border-radius: 10px; background-color: #f8f9fa; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
     <h2 class="text-center mb-4 text-danger">🎁🎄 Gift Form 🎄🎁</h2>
     <div class="row">
@@ -68,6 +70,7 @@
 
       <!-- Form on the right (50%) -->
       <div class="col-md-6">
+        <form id="giftForm" action="#" method="POST">
         <form id="giftForm" action="#" method="POST">
           <!-- Username -->
           <div class="mb-3">
@@ -193,6 +196,16 @@
   </style>
 
 </body>
+
+<script>
+  document.getElementById('giftForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Hide the form container and show the thank-you box
+    document.getElementById('formContainer').classList.add('d-none');
+    document.getElementById('thankYouBox').classList.remove('d-none');
+  });
+</script>
 
 <script>
   document.getElementById('giftForm').addEventListener('submit', function (event) {
