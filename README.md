@@ -41,6 +41,7 @@ The inspiration behind Santa's Bag comes from addressing two key challenges duri
 - Donors often feel unrecognized for their efforts, which discourages continued participation in charitable giving
 These challenges sparked the idea to create a platform that makes giving both simple and rewarding, while fostering a stronger sense of community during the holiday season.
 
+
 ## What it does
 Santa's Bag is a user-friendly donation platform that combines ease of use with gamification elements:
 - Provides a streamlined donation process where users can contribute items through a simple form-based interface
@@ -49,6 +50,7 @@ Santa's Bag is a user-friendly donation platform that combines ease of use with 
 - Offers a point redemption system where users can exchange their earned points for exclusive gifts and discounts
 - Displays a countdown timer to donation deadlines and tracks donation history
 
+
 ## How we built it
 The platform was developed using a modern technology stack:
 - Frontend: HTML, CSS, and Bootstrap 5 for creating a clean, responsive user interface
@@ -56,13 +58,15 @@ The platform was developed using a modern technology stack:
 - Database: MySQL2 for efficient data management and tracking of donations, points, and user information
 - The website is structured with distinct pages for home, donations, and leaderboard, each serving specific functionalities while maintaining a cohesive user experience
 
+
 ## Challenges we ran into
-While the presentation doesn't explicitly mention challenges, based on the complex features implemented, likely challenges included:
+Making the platform wasn’t easy work, there were some struggle we face along the way such as:
 - Designing a fair and engaging point system that properly values different types of donations
 - Implementing secure transaction handling for donations
 - Managing database operations for real-time leaderboard updates
-- Establishing seamless communication between the frontend and backend systems, particularly for real-time features like the leaderboard and point tracking
 - Ensuring data consistency across different components when handling user donations and point calculations
+-Linking the front-end with the back-end: While we had experience with front-end development (writing the website) and back-end systems like MySQL, we faced challenges integrating the two. Overcoming this involved learning new concepts and experimenting with ways to connect the user interface to the database seamlessly.
+
 
 ## Accomplishments that we're proud of
 The team has created a comprehensive platform that:
@@ -71,12 +75,14 @@ The team has created a comprehensive platform that:
 - Creates a competitive yet collaborative community through the leaderboard feature
 - Develops a full-featured website with multiple integrated components working seamlessly together
 
+
 ## What we learned
 Through this project, the team gained experience in:
 - Full-stack web development using modern technologies
 - Implementing gamification elements to encourage user engagement
 - Creating systems that balance user experience with functional requirements
 - Developing features that foster community involvement and social impact
+
 
 ## What's next for Santa's Bag
 Future development possibilities include:
