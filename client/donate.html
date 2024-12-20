@@ -57,7 +57,7 @@
   </div>
 
   <!-- Gift form -->
-  <div class="container mt-5"
+  <div id="formContainer" class="container mt-5"
     style="max-width: 100%; padding: 30px; border-radius: 10px; background-color: #f8f9fa; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
     <h2 class="text-center mb-4 text-danger">🎁🎄 Gift Form 🎄🎁</h2>
     <div class="row">
@@ -68,7 +68,7 @@
 
       <!-- Form on the right (50%) -->
       <div class="col-md-6">
-        <form id="giftForm" action="http://localhost:8000/gifts" method="POST">
+        <form id="giftForm" action="#" method="POST">
           <!-- Username -->
           <div class="mb-3">
             <label for="username" class="form-label text-danger">Username</label>
@@ -98,14 +98,8 @@
               <option value="10">Pants</option>
               <option value="11">Wallet</option>
               <option value="12">Bag</option>
-
             </select>
           </div>
-
-          <!-- <div class="mb-3">
-            <label for="gift" class="form-label text-danger">Gift</label>
-            <input type="text" class="form-control border-danger" id="gift" name="gift" required>
-        </div> -->
 
           <!-- Amount -->
           <div class="mb-3">
@@ -120,6 +114,17 @@
     </div>
   </div>
 
+  <!-- Thank You Box -->
+  <div id="thankYouBox" class="container mt-5 d-none p-5"
+    style="max-width: 100%; padding: 30px; border-radius: 10px; background-color: #f8f9fa; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <h2 class="text-center text-success mb-4">🎁🎄 Thank You! 🎄🎁</h2>
+    <div class="text-center">
+      <i class="fas fa-check-circle fa-5x text-success mb-4"></i>
+      <p class="text-success">You can visit our <a href="leaderboard.html" class="text-success fw-bold"
+          style="text-decoration: underline;">Leaderboard Page</a> to review your donation history.
+      </p>
+    </div>
+  </div>
 
 
   <div class="container mb-5 pb-5">
@@ -187,6 +192,16 @@
   </style>
 
 </body>
+
+<script>
+  document.getElementById('giftForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Hide the form container and show the thank-you box
+    document.getElementById('formContainer').classList.add('d-none');
+    document.getElementById('thankYouBox').classList.remove('d-none');
+  });
+</script>
 
 
 </html>

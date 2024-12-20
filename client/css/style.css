@@ -338,7 +338,18 @@ h1 {
 }
 
 
+#thankYouBox {
+  background-color: #f8f9fa;
+  border: 2px solid green;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: red;
+}
 
+#thankYouBox i {
+  color: green;
+}
 
 
 
