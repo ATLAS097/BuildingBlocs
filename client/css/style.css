@@ -168,6 +168,11 @@ body {
   border-radius: 5px; 
 }
 
+.custom-img-size {
+  max-width: 50% !important;
+  height: auto;
+}
+
 
 /* Navbar */
 .navbar {
@@ -337,9 +342,18 @@ h1 {
   color: #228B22; /* Green for labels like Months, Days */
 }
 
+#thankYouBox {
+  background-color: #f8f9fa;
+  border: 2px solid green;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: red;
+}
 
-
-
+#thankYouBox i {
+  color: green;
+}
 
 
 /* Footer */
